@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <style>
+        
+        body {
+            background-color: rgb(51, 255, 0);
+         
+        }
+
+        /*tem mais pontos entao é o que vale mesmo o outro vindo dps
+        html body h1{
+            font-size: 40px;
+        }
+*/
+        h1{
+            font-size: 100px;
+        }
+        /*Especifico para tablets*/
+        @media (min-width:768px) and (max-width:1023px) {
+            body{
+                background-color: rgb(0, 140, 255);
+                color: #000000;
+            }
+            h1 {
+                font-size: 50px;
+            }
+        }
+
+        /*especifico para Smartphones*/
+        @media (max-width:767px) {
+            body{
+                background-color: rgb(255, 213, 0);
+                color: #fff;
+            }
+            h1 {
+                font-size: 50px;
+            }
+            .img-pequena{
+                display: block;
+            }
+            .img-grande{
+                display: none;
+            }
+
+
+            
+
+
+
+
+
+        }
+
+        /*Especifico para Descktop*/
+        @media (min-width:1024px) {
+            body{
+                background-color: red;
+                color: #000000;
+            }
+            h1 {
+                font-size: 50px;
+            }
+            .img img{
+                /*ela vai ter no maximo o 100% do tamanho de caixa onde ela esta*/
+                max-width: 100%;
+                min-width: 100%;
+            }
+          
+            .img-pequena{
+                display: none;
+            }
+
+        }
+
+
+    </style>
+</head>
+<body>
+        <h1>Media Queries</h1>
+
+
+    <div class="img img-grande">
+
+        <img src="https://placehold.co/1000x400" alt="">
+
+
+    </div>
+
+    <div class="img img-pequena">
+
+        <img src="https://placehold.co/500x400" alt="">
+
+
+    </div>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam provident laborum, mollitia distinctio perspiciatis tempore sed sequi obcaecati aliquam pariatur et, fuga aspernatur totam iste ipsum eos consequatur eius? Similique.
+        </p>
+</body>
+</html>
